@@ -1,0 +1,192 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19-Mar-2018, 5:48:00 PM
+    Author     : feguv
+*/
+
+.site {
+    background-color: $color__background-site;
+}
+
+@media screen and (min-width: 600px) {
+.site {
+    margin:24px;
+    padding: 24px
+    }
+}
+ 
+@media screen and (max-width: 600px) {
+    .site {
+        padding: 1%;
+    }
+}
+ 
+// SITE HEADER LAYOUT
+.site-header, .site-footer, .widget-area {
+    background-color: $color__background-header-footer;
+}
+
+.site-header {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    
+    .site-branding {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.articles {
+    
+    margin-bottom: 4em;
+    
+    .entry-header {
+        font-size: .6em;
+        margin-bottom: 0;
+    }
+    
+    .entry-footer {
+        text-align: center;
+    }
+    
+    @media screen and (min-width: 600px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        justify-content: flex-start;
+        
+        article {
+            margin: 0 .5em .5em .5em;
+            
+            .entry-title {
+                margin-bottom: 0;
+            }
+            
+            .entry-content {
+                margin-top: 0;
+            }
+        }
+    }
+    
+    @media screen and (min-width: 1200px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        justify-content: flex-start;
+    }
+    
+    @media screen and (min-width: 1600px) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        justify-content: flex-start;
+    }
+}
+
+body.search, body.archive {
+    .page-title {
+        text-align: center;
+        margin: 2em 0;
+    }
+}
+
+//single page content
+body.single {
+    
+    main#main {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    article {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto 1fr;
+        
+        .entry-header {
+            grid-column: 1/-1;
+            grid-row: 1/2;
+            font-family: $font__sans;
+            font-size: .9em;
+        }
+        
+        .entry-content {
+            grid-column: 2/-1;
+            grid-row: 2/3;
+            margin-top: 0;
+        }
+        
+        .entry-meta-data {
+            grid-column: 1/1;
+            grid-row: 2/3;
+            
+            ul {
+                margin: 0;
+                padding: 0;
+                
+                li {
+                    list-style-type: none;
+                    margin-bottom: 15px;
+                    
+                    span {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer.site-footer {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    
+    footer div#nf-form-3-cont {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        
+        .nf-form-title, .nf-before-form-content, #nf-field-9-container {
+            text-align: center;
+        }
+        
+        div.submit-container {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+        }
+    }
+    
+    
+//page layout
+body.page .site-content #primary, body.error404 .site-content #primary {
+    width: 80%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body.error404 {
+    .site-content #primary {
+        text-align: center;
+    }
+    
+    .widget_recent_entries {
+        ul {
+            margin: 0;
+            padding: 0;
+            
+            li {
+                list-style-type: none;
+            }
+        }
+    }
+}

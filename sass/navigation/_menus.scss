@@ -1,0 +1,96 @@
+.navigation, #nav_menu-2 {
+    
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin-bottom: 15px;
+
+        li {
+            list-style-type: none;
+            border: 1px solid #fff;
+            padding: 5px;
+            text-transform: uppercase;
+            flex: 1 0 auto;
+            text-align: center;
+        }
+    }
+}
+
+#pages-menu li {
+    border: none;
+}
+
+#nav_menu-2 {
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    
+    h2 {
+        text-align: center;
+    }
+    
+    #menu-main-menu {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}
+
+//social
+.social-menu {
+    margin: 0;
+    padding: 0;
+    
+    li {
+        display: inline-block;
+        font-size: 3em;
+        margin: 10px;
+    }
+    
+    a {
+        font-family: $font__icons;
+        color: purple;
+        text-decoration: none;
+        
+        &[href^="http://facebook.com"]::before {
+            content: "\f082";
+        }
+        
+        &[href^="http://twitter.com"]::before {
+            content: "\f081";
+        }
+        
+        &[href^="http://pinterest.com"]::before {
+            content: "\f0d3";
+        }
+        
+        &[href^="http://youtube.com"]::before {
+            content: "\f431";
+        }
+    } 
+}
